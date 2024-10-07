@@ -1,6 +1,6 @@
 
 What is Kubernetes?
-Docker Containers solved the problem of scaling Virtual Machines. Basically every application that we browse online would be stored 
+Docker Containers solved the problems with old Virtualiation Techniques of hosting and managing web applications on VMs where the resources were shared by the apps running on the VM instances.Basically every application that we browse online would be stored 
 and hosted by a VM provider. Example : VMware /Citrix  Hypervisors provide the ability to create Virtual Machines.
 Once a VM is created, next step is deploying the applications on them and opening up the necessary ports/ configuring Firewall rules
 to make the application talk to the world. All these tasks need to be done manually and the maintenance was getting cumbersome.
