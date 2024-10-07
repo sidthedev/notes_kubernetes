@@ -1,0 +1,39 @@
+
+What is Kubernetes?
+Docker Containers solved the problem of scaling Virtual Machines. Basically every application that we browse online would be stored 
+and hosted by a VM provider. Example : VMware /Citrix  Hypervisors provide the ability to create Virtual Machines.
+Once a VM is created, next step is deploying the applications on them and opening up the necessary ports/ configuring Firewall rules
+to make the application talk to the world. All these tasks need to be done manually and the maintenance was getting cumbersome.
+That is when the Docker Containers came in handy and the Solution was "Instead of installing all applications on a VM where these apps
+would compete for the CPU,Network and IO Resources. Docker came up with the concept of Containers. Yes.. for every application that needs
+to be hosted on a VM, we can create a docker container image and the application would run in its container build environment. We package 
+all the dependencies like software libraries, any frameworks needed, apatches etc into the one single docker image and start the container.
+For the end user requesting the application, the application would see it as being run in a separate virtual environment and full system 
+resources are available for its processing. This concept separates the application contestong for system resourves and also any failures
+in the application would get restricted only to that container and thereby not holding up the CPU which would otherwise would have halted 
+until the application becomes responsive.
+So now we understood how docketr solved the main problem of ensuring the applications arent consuming system resources in its entirety. Now the next
+question is how do we manaege this infrastructure? In a larger scale. Lets say we have 100 apps and we create docker 100 docker images and deploy on
+the VMs, then how do we manage the Infra? What if the number of requests hitting the virtual machines increases exponentially? We need to have a way to increase or decrease the system resources right. Also we need a more Enterprise Level Support for this Infra.
+
+Thats when Kubernetes Solution came into play. With Kubernetes, one can create and deploy such docker images in a very swift way. This will ensure that
+the deployed container imaege gets installed on a VM and able to serve the clients.  This solves the 4 fundamental requirements that were present in
+docker containers: 
+1) Single Host 
+2) Auto Scaling
+3) Auto Healing
+4) Enterprise Level Support
+
+Kubernetes has 2 parts to it. 1) Data Plane 2) Control Plane
+In the Data Plane [ Worker Node ] we have these utilities that help us in talking and managing to the Kubernetes Cluster:
+1) kubectl 2) kubeproxy 3) CRT ( Container Run Time
+Next we have the Control Plane: [Master Node]
+1) API Server
+2) Scheduler
+3) ETCD (Backup)
+4) Controller Manager
+5) CCM (Cloud Controller Manager)
+
+
+
+
